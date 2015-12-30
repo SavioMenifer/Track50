@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add/Remove Packages</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container" id="main">
+      <h3>Add a Package</h3>
+      <form role="form" id="add_box">
+        <div class="form-group" id="nameForm">
+          <input type="text" class="form-control" id="name" placeholder="Package Name">
+        </div>
+        <div class="form-group" id="codeForm">
+          <input type="text" class="form-control" id="code" placeholder="Tracking Number">
+        </div>
+        <div class="form-group" id="carrierForm">
+          <select class="form-control" id="carrier">
+            <option value="none" selected="selected" disabled="disabled">Carrier</option>
+            <option value="usps">USPS</option>
+            <option value="fedex">FedEx</option>
+            <option value="ups">UPS</option>
+            <option value="dhl_express">DHL Express</option>
+            <option value="canada_post">Canada Post</option>
+          </select>
+        </div>
+        <button type="submit" id="butt" value="add" class="btn btn-primary center-block btn-block">Add Package</button>
+      </form>
+    </div>
+
+    <div class="container" id="list">
+      <h3>Manage Packages</h3>
+      <p id='info' class='text-muted'>Loading...</p>
+      <ol id="olist" class="list-group list_of_packages">
+      </ol>
+    </div>
+
+    <form role="form" id="save_box">
+      <div>
+        <button type="submit" id="send" class="btn btn-primary btn-lg btn-block push-to-bottom">Send to Pebble</button>
+      </div>
+    </form>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
